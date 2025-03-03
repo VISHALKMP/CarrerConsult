@@ -8,4 +8,12 @@ const Rating = sequelize.define('Rating', {
     createdAt: { type: DataTypes.DATE, defaultValue: DataTypes.NOW }
 });
 
+sequelize.sync()
+.then(result=>{
+    console.log("Rating table created successfully"); 
+})
+.catch(err=>{
+    console.log("Error while creating Rating table",err);
+});
+
 export default Rating;

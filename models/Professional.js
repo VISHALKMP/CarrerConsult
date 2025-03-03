@@ -15,8 +15,13 @@ const Professional = sequelize.define('Professional', {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true
-    },
+        // unique: true
+    }, 
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false
+    }
+    ,
     contact: {
         type: DataTypes.STRING,
         allowNull: false
@@ -44,9 +49,13 @@ const Professional = sequelize.define('Professional', {
 }, {
     timestamps: true
 });
-sequelize.sync({ alter: true })
+sequelize.sync()
   .then(() => console.log('✅ Database & Tables Synced'))
-  .catch(err => console.error('❌ Sync Error:', err));
+  .catch(err =>{
+    console.log("Pro")
+    console.error('❌ Sync Error:', err)
+}
+);
 
 
 export default Professional;

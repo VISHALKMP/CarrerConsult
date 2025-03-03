@@ -9,6 +9,9 @@ import Rating from './Rating.js';
 Admin.hasMany(Professional);
 Professional.belongsTo(Admin);
 
+
+
+
 // Professional - Consultation Relationship
 Professional.hasMany(Consultation);
 Consultation.belongsTo(Professional);
@@ -17,7 +20,7 @@ Consultation.belongsTo(Professional);
 User.hasMany(Consultation);
 Consultation.belongsTo(User);
 
-     // User - Rating Relationship
+// User - Rating Relationship
 User.hasMany(Rating);
 Rating.belongsTo(User);
 

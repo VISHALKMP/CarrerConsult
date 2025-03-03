@@ -4,5 +4,7 @@ import { requestConsultation,getAllConsultations } from '../controllers/consulta
 const router = express.Router();
 
 router.post('/request', requestConsultation);
-router.get('/', getAllConsultations);
+router.get('/:id', getAllConsultations);
+console.log(getAllConsultations);
+
 export default router;
