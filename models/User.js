@@ -16,10 +16,24 @@ const User = sequelize.define('User', {
         allowNull: false,
         unique: true
     },
+    contact:{
+   type:DataTypes.INTEGER,
+   allowNull:false,
+   unique:true
+    },
     password: {
         type: DataTypes.STRING,
         allowNull: false
     },
+    resetOtp: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      resetOtpExpiry: {
+        type: DataTypes.BIGINT,
+        allowNull: true,
+      },
+      
     role: {
         type: DataTypes.ENUM('user'),
         allowNull: true

@@ -3,9 +3,9 @@ import bcrypt from "bcryptjs";
 export const logcheck = async(req,res,next)=>{
 
 const { email, password } = req.body;
+console.log(req.body);
 if (!email || !password) {
     return res.status(400).json({ message: 'All fields required' });
-    // console.log(req.body);
     
 }
 

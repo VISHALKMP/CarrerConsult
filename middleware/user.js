@@ -2,9 +2,9 @@ import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 export const registerCheck = async (req,res,next) =>{
     try{
-        const { name, email, password} = req.body;
+        const { name, email, password,contact} = req.body;
 
-        if (!name || !email || !password ) {
+        if (!name || !email || !password || !contact) {
             return res.status(400).json({ message: 'All fields are required' });
           
         }
